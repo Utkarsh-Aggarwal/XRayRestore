@@ -1,0 +1,8 @@
+data/
+checkpoints/
+*.pt
+wandb/
+runs/
+__pycache__/
+.venv/
+.pytest_cache/

@@ -1,0 +1,25 @@
+seed: 0
+data_dir: data/sample
+splits: data/splits.csv
+image_size: 256
+doses: [10000, 5000, 2000]   # I0 photon counts, lower = noisier
+sigma_e: 0.01
+model:
+  channels: [32, 64, 128, 256]
+  norm: batch
+loss:
+  l1: 1.0
+  ssim: 0.2
+  perceptual: 0.05
+train:
+  epochs: 40
+  batch_size: 16
+  lr: 2.0e-4
+  weight_decay: 1.0e-4
+  num_workers: 4
+eval:
+  bm3d_max_images: 500
+  min_positives: 10
+ablations:
+  l1_only: {l1: 1.0, ssim: 0.0, perceptual: 0.0, epochs: 10}
+  l1_ssim: {l1: 1.0, ssim: 0.2, perceptual: 0.0, epochs: 10}

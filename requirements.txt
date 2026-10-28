@@ -1,0 +1,14 @@
+torch>=2.2
+torchvision>=0.17
+torchxrayvision>=1.2
+monai>=1.3
+opencv-python
+bm3d
+scikit-image
+scikit-learn
+pandas
+matplotlib
+tqdm
+pyyaml
+kaggle
+pytest
